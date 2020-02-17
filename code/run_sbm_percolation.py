@@ -28,6 +28,9 @@ def run(N, Nc, k, Xmin, Xmax, spacing, iterations, samples, verbose=False):
         kout = k - kin
         pout = kout / (N-Nc)
 
+        if pin < 0 or pin > 1:
+            continue
+
         #print(qin, pin, pout)
        
         for it in range(iterations):
